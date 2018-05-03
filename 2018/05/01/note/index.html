@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="tanglintang的博客">
 <meta property="og:description" content="函数 (Functions)函数对象JavaScript 中的函数就是对象，函数可以保存在变量、对象和数组中，可以被当做参数传递给其他函数，函数也可以再返回函数，函数可以拥有方法 通过字面量创建函数123var func = function(a) &amp;#123;    return a;&amp;#125; 函数调用函数调用会暂停当前函数的执行，传递控制权和参数给新函数 除了声明时定义的形参，每个函数接收">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-01T14:50:17.397Z">
+<meta property="og:updated_time" content="2018-05-01T15:08:43.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 语言精粹学习笔记">
 <meta name="twitter:description" content="函数 (Functions)函数对象JavaScript 中的函数就是对象，函数可以保存在变量、对象和数组中，可以被当做参数传递给其他函数，函数也可以再返回函数，函数可以拥有方法 通过字面量创建函数123var func = function(a) &amp;#123;    return a;&amp;#125; 函数调用函数调用会暂停当前函数的执行，传递控制权和参数给新函数 除了声明时定义的形参，每个函数接收">
@@ -97,9 +97,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -186,6 +186,36 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -312,10 +342,10 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    value: <span class="number">0</span>,</span><br><span class="line">    show: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">obj.show();</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>通过 <code>this</code> 可以取得上下文方法称为公共方法</p>
+</blockquote>
 <ul>
 <li><h3 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h3></li>
 </ul>
-</blockquote>
 <p>当一个函数并非一个对象属性时，就是被当做一个函数来调用的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">    value: <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">myObject.double = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.value)         <span class="comment">// undefined</span></span><br><span class="line">        <span class="built_in">console</span>.log(that.value)         <span class="comment">// 0</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    helper();		<span class="comment">// 以函数的形式调用</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">myObject.double()	<span class="comment">// 以方法的形式调用</span></span><br></pre></td></tr></table></figure>
 <p>以此模式调用函数时，<code>this</code> 将会绑定到全局对象，而内部函数的 <code>this</code> 无法绑定外部函数 的<code>this</code> 变量，所以不能共享访问权。</p>
@@ -462,7 +492,7 @@
                 alt="tang" />
             
               <p class="site-author-name" itemprop="name">tang</p>
-              <p class="site-description motion-element" itemprop="description">稳住，我们能赢</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -529,7 +559,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -547,7 +578,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -594,6 +625,8 @@
   
 
 
+  
+
 
 
 
@@ -632,6 +665,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -714,5 +752,9 @@
 
   
 
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </body>
 </html>

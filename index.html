@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,16 +79,13 @@
 
 
 
-<meta name="description" content="稳住，我们能赢">
 <meta property="og:type" content="website">
 <meta property="og:title" content="tanglintang的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="tanglintang的博客">
-<meta property="og:description" content="稳住，我们能赢">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tanglintang的博客">
-<meta name="twitter:description" content="稳住，我们能赢">
 
 
 
@@ -96,9 +93,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -186,6 +183,36 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -303,68 +330,16 @@
       
         
           
-            <h1 id="函数-Functions"><a href="#函数-Functions" class="headerlink" title="函数 (Functions)"></a>函数 (Functions)</h1><h2 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h2><p><code>JavaScript</code> 中的函数就是对象，函数可以保存在变量、对象和数组中，可以被当做参数传递给其他函数，函数也可以再返回函数，函数可以拥有方法</p>
-<h2 id="通过字面量创建函数"><a href="#通过字面量创建函数" class="headerlink" title="通过字面量创建函数"></a>通过字面量创建函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><p>函数调用会暂停当前函数的执行，传递控制权和参数给新函数</p>
-<p>除了声明时定义的形参，每个函数接收两个附加的参数 <code>this</code> 和 <code>arguments</code></p>
-<p>当实参和形参个数不匹配时，不会导致运行错误，实参过多则忽略超出的参数，实参不足则缺失的参数默认为 <code>undefined</code>，而且对参数不会进行类型检查。</p>
-<p><strong>JavaScript 中有四种调用模式：</strong></p>
-<ul>
-<li><h3 id="方法调用模式"><a href="#方法调用模式" class="headerlink" title="方法调用模式"></a>方法调用模式</h3></li>
-</ul>
-<p>当函数被保存为对象的一个属性时，称之为方法。<br>    如果调用表达式包含一个提取属性的动作：：<code>.</code>表达式或<code>[]</code>下标表达式，就是被当做方法调用。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    value: <span class="number">0</span>,</span><br><span class="line">    show: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">obj.show();</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>通过 <code>this</code> 可以取得上下文方法称为公共方法</p>
-<ul>
-<li><h3 id="函数调用模式"><a href="#函数调用模式" class="headerlink" title="函数调用模式"></a>函数调用模式</h3></li>
-</ul>
-</blockquote>
-<p>当一个函数并非一个对象属性时，就是被当做一个函数来调用的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">    value: <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">myObject.double = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> helper = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.value)         <span class="comment">// undefined</span></span><br><span class="line">        <span class="built_in">console</span>.log(that.value)         <span class="comment">// 0</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    helper();		<span class="comment">// 以函数的形式调用</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">myObject.double()	<span class="comment">// 以方法的形式调用</span></span><br></pre></td></tr></table></figure>
-<p>以此模式调用函数时，<code>this</code> 将会绑定到全局对象，而内部函数的 <code>this</code> 无法绑定外部函数 的<code>this</code> 变量，所以不能共享访问权。</p>
-<blockquote>
-<p>解决办法：外部定义一个 <code>that</code> 变量保存 <code>this</code> 的值，内部函数通过 <code>that</code> 访问。</p>
-</blockquote>
-<ul>
-<li><h3 id="构造器调用模式"><a href="#构造器调用模式" class="headerlink" title="构造器调用模式"></a>构造器调用模式</h3></li>
-</ul>
-<p>如果一个类需要通过 <code>new</code> 关键字调用，那就是构造函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Func = <span class="function"><span class="keyword">function</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.status = string;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myFunc = <span class="keyword">new</span> Func(<span class="string">'construct'</span>);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="apply-调用模式"><a href="#apply-调用模式" class="headerlink" title="apply 调用模式"></a>apply 调用模式</h3></li>
-</ul>
-<p><code>apply</code> 方法需要构建一个参数数组传递给调用函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">var</span> sum = add.apply(arr, [<span class="number">3</span>, <span class="number">4</span>]);</span><br></pre></td></tr></table></figure>
-<h2 id="返回-Return"><a href="#返回-Return" class="headerlink" title="返回 Return"></a>返回 Return</h2><p>一个函数总会返回一个值，如果没有指定返回值，则返回 <code>undefined</code>。</p>
-<blockquote>
-<p><code>return;</code> 可用来使函数提前返回</p>
-</blockquote>
-<h2 id="异常-Exceptions"><a href="#异常-Exceptions" class="headerlink" title="异常 Exceptions"></a>异常 Exceptions</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a != <span class="string">'number'</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> &#123;</span><br><span class="line">            name: <span class="string">'TypeError'</span>,</span><br><span class="line">            message: <span class="string">'a need to be number'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    add(<span class="string">'a'</span>)</span><br><span class="line">&#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error)	<span class="comment">// &#123;name: 'TypeError',message: 'a need to be number'&#125;</span></span><br><span class="line">    <span class="comment">// console.log(error.name + error.message)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="扩充类型的功能"><a href="#扩充类型的功能" class="headerlink" title="扩充类型的功能"></a>扩充类型的功能</h2><p>  通过给 <code>Object.prototype</code> 添加方法，可以让该方法对所有对象都可用。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.method = <span class="function"><span class="keyword">function</span>(<span class="params">name, func</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.prototype[name] = func;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 去除首位空格</span></span><br><span class="line"><span class="built_in">String</span>.method(<span class="string">'trim'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.replace(<span class="regexp">/^\s+|\s+$/g</span>, <span class="string">''</span>);</span><br><span class="line">&#125;)</span><br><span class="line">  </span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"  neat  "</span>.trim());		<span class="comment">// neat</span></span><br></pre></td></tr></table></figure>
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>  函数自己调用自己，称为函数的递归调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 自己调用自己，称为递归调用</span></span><br><span class="line">    fun();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"a"</span>);</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
-<h2 id="作用域-Scope"><a href="#作用域-Scope" class="headerlink" title="作用域 Scope"></a>作用域 Scope</h2><p>作用域控制着变量与参数的可以性及声明周期。</p>
-<p>减少了名称冲突，并且提供了自动内存管理。</p>
-<p>函数内部可以直接读取全局变量，函数外部无法读取函数内部的局部变量    </p>
-<p>但实际上 <code>JavaScript</code> 语法并<strong>不支持块级作用域</strong>，函数中的参数和变量在外部不可见，在内部可见</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">3</span>, b = <span class="number">5</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> bar = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = <span class="number">4</span>, b = <span class="number">6</span>;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'a '</span> + a + <span class="string">', b '</span> + b);		<span class="comment">// a = 4, b = 6</span></span><br><span class="line">    &#125;()</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a '</span> + a + <span class="string">', b '</span> + b);		<span class="comment">// a = 3, b = 5</span></span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
-<h2 id="闭包-Closure"><a href="#闭包-Closure" class="headerlink" title="闭包 Closure"></a>闭包 Closure</h2><p>闭包就是能够读取其他函数内部变量的函数</p>
-<p>由于在 <code>Javascript</code> 语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成 <strong>“定义在一个函数内部的函数”</strong>。</p>
-<p>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
-<p>  作用：</p>
-<ul>
-<li><strong>可以读取函数内部的变量</strong></li>
-<li><strong>让这些变量的值始终保持在内存中</strong></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> n = <span class="number">999</span>;</span><br><span class="line"></span><br><span class="line">    nAdd = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> f2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = f1();</span><br><span class="line"></span><br><span class="line">result(); <span class="comment">// 999</span></span><br><span class="line"></span><br><span class="line">nAdd();</span><br><span class="line"></span><br><span class="line">result(); <span class="comment">// 1000</span></span><br></pre></td></tr></table></figure>
-<p><strong>匿名函数本身就是闭包</strong></p>
-<h2 id="回调-Callback"><a href="#回调-Callback" class="headerlink" title="回调 Callback"></a>回调 Callback</h2><p><strong>回调函数原理</strong>：“我现在出发，到了通知你”。<br>这是一个异步的流程，“我出发”这个过程中（函数执行），“你” 可以去做任何事，“到了”（函数执行完毕）“通知你”（回调）进行之后的流程。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    callback(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">numberAdd</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(a+b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">doSomething(numberAdd);<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<h2 id="模块-Module"><a href="#模块-Module" class="headerlink" title="模块 Module"></a>模块 Module</h2><p>  模块是一个提供接口却隐藏状态与实现的函数或对象。</p>
-
-          
+          函数 (Functions)函数对象JavaScript 中的函数就是对象，函数可以保存在变量、对象和数组中，可以被当做参数传递给其他函数，函数也可以再返回函数，函数可以拥有方法
+通过字面量创建函数123var func = function(a) &#123;    return a;&#125;
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/01/note/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -482,17 +457,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/19/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -566,7 +539,7 @@
                 alt="tang" />
             
               <p class="site-author-name" itemprop="name">tang</p>
-              <p class="site-description motion-element" itemprop="description">稳住，我们能赢</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -617,7 +590,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -635,7 +609,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
@@ -682,6 +656,8 @@
   
 
 
+  
+
 
 
 
@@ -720,6 +696,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -798,5 +779,9 @@
 
   
 
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </body>
 </html>
