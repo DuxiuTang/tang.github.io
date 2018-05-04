@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8cd7;
+  background: #ff129d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2905,11 +2905,12 @@ hr {
   }
 }
 .post {
+  background-color: #f5f5f5;
   margin-top: 60px;
   margin-bottom: 60px;
   padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.7);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.7);
 }
 code {
   color: #ff7600;
@@ -2926,4 +2927,9 @@ pre {
 code,
 pre {
   border: 1px solid #d6d6d6;
+}
+.sidebar {
+  background: url("/images/star.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
 }
