@@ -1555,6 +1555,9 @@ pre .javascript .function {
   display: inline-block;
   margin-right: 10px;
   font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #0593d3;
 }
 .post-nav {
   display: table;
@@ -1657,6 +1660,16 @@ pre .javascript .function {
 }
 .rtl.post-title {
   font-family: UKIJ Ekran;
+}
+.post-body a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
 }
 .sidebar {
   position: fixed;
@@ -1822,7 +1835,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0104f0;
+  background: #1a3488;
 }
 .links-of-blogroll {
   font-size: 13px;
