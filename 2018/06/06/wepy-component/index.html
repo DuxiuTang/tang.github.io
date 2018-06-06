@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="wepy,component,组件," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="移动 Web 1像素 问题问题：一般在移动端，由于dpr（设备像素比）不为1，在PC端显示1像素的边框，在移动端其实显示为2px。解决这个问题，主要思想是：使用伪元素设置1px的边框，然后使用 transform:scale，对边框进行缩放（scaleY）。123456789101112131415// 上边框:before    content &quot;&quot;    position absolute">
+<meta name="description" content="wepy 组件化开发 1要点 组件可以将一组功能封装一个 component 里，并且可以在页面上以自定义标签的形式引入 12345678&amp;lt;!-- 列表 --&amp;gt;&amp;lt;discover&amp;gt;&amp;lt;/discover&amp;gt;&amp;lt;!-- 底部加载更多提示 --&amp;gt;  &amp;lt;bottomLoadMore :message=&apos;mes&apos; :show.sync=&apos;showLoadin">
+<meta name="keywords" content="wepy,component,组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tanglintang的博客">
-<meta property="og:url" content="http://yoursite.com/2018/05/16/ques-1px/index.html">
+<meta property="og:title" content="wepy-component">
+<meta property="og:url" content="http://yoursite.com/2018/06/06/wepy-component/index.html">
 <meta property="og:site_name" content="tanglintang的博客">
-<meta property="og:description" content="移动 Web 1像素 问题问题：一般在移动端，由于dpr（设备像素比）不为1，在PC端显示1像素的边框，在移动端其实显示为2px。解决这个问题，主要思想是：使用伪元素设置1px的边框，然后使用 transform:scale，对边框进行缩放（scaleY）。123456789101112131415// 上边框:before    content &quot;&quot;    position absolute">
+<meta property="og:description" content="wepy 组件化开发 1要点 组件可以将一组功能封装一个 component 里，并且可以在页面上以自定义标签的形式引入 12345678&amp;lt;!-- 列表 --&amp;gt;&amp;lt;discover&amp;gt;&amp;lt;/discover&amp;gt;&amp;lt;!-- 底部加载更多提示 --&amp;gt;  &amp;lt;bottomLoadMore :message=&apos;mes&apos; :show.sync=&apos;showLoadin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T09:19:04.882Z">
+<meta property="og:updated_time" content="2018-06-06T14:55:48.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tanglintang的博客">
-<meta name="twitter:description" content="移动 Web 1像素 问题问题：一般在移动端，由于dpr（设备像素比）不为1，在PC端显示1像素的边框，在移动端其实显示为2px。解决这个问题，主要思想是：使用伪元素设置1px的边框，然后使用 transform:scale，对边框进行缩放（scaleY）。123456789101112131415// 上边框:before    content &quot;&quot;    position absolute">
+<meta name="twitter:title" content="wepy-component">
+<meta name="twitter:description" content="wepy 组件化开发 1要点 组件可以将一组功能封装一个 component 里，并且可以在页面上以自定义标签的形式引入 12345678&amp;lt;!-- 列表 --&amp;gt;&amp;lt;discover&amp;gt;&amp;lt;/discover&amp;gt;&amp;lt;!-- 底部加载更多提示 --&amp;gt;  &amp;lt;bottomLoadMore :message=&apos;mes&apos; :show.sync=&apos;showLoadin">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/16/ques-1px/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/06/wepy-component/"/>
 
 
 
 
 
-  <title> | tanglintang的博客</title>
+  <title>wepy-component | tanglintang的博客</title>
   
 
 
@@ -286,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/ques-1px/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/06/wepy-component/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tang">
@@ -303,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">wepy-component</h1>
         
 
         <div class="post-meta">
@@ -315,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T16:41:39+08:00">
-                2018-05-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T22:50:08+08:00">
+                2018-06-06
               </time>
             
 
@@ -333,7 +334,7 @@
 
           
           
-             <span id="/2018/05/16/ques-1px/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2018/06/06/wepy-component/" class="leancloud_visitors" data-flag-title="wepy-component">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -363,7 +364,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  203 字
+                  697 字
                 </span>
               
 
@@ -388,8 +389,32 @@
       
 
       
-        <h1 id="移动-Web-1像素-问题"><a href="#移动-Web-1像素-问题" class="headerlink" title="移动 Web 1像素 问题"></a>移动 Web 1像素 问题</h1><p>问题：一般在移动端，由于dpr（设备像素比）不为1，在PC端显示1像素的边框，在移动端其实显示为2px。<br>解决这个问题，主要思想是：<strong>使用伪元素设置1px的边框，然后使用 transform:scale，对边框进行缩放（scaleY）。</strong><br><figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 上边框</span></span><br><span class="line">:before</span><br><span class="line">    <span class="attribute">content</span> <span class="string">""</span></span><br><span class="line">    <span class="attribute">position</span> absolute</span><br><span class="line">    <span class="attribute">top</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">left</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">right</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">height</span> <span class="number">1px</span></span><br><span class="line">    <span class="attribute">border-top</span> <span class="number">1px</span> solid e5e5e5</span><br><span class="line">    <span class="attribute">color</span> <span class="number">#e5e5e5</span></span><br><span class="line">    -webkit-<span class="attribute">transform-origin</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">transform-origin</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line">    -webkit-<span class="attribute">transform</span> scaleY(<span class="number">0.5</span>)</span><br><span class="line">    <span class="attribute">transform</span> scaleY(<span class="number">0.5</span>)</span><br><span class="line">    <span class="attribute">z-index</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下边框 注意 transform-origin</span></span><br><span class="line">&amp;:after</span><br><span class="line">    <span class="attribute">content</span> <span class="string">""</span></span><br><span class="line">    <span class="attribute">position</span> absolute</span><br><span class="line">    <span class="attribute">bottom</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">left</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">right</span> <span class="number">0</span></span><br><span class="line">    <span class="attribute">height</span> <span class="number">1px</span></span><br><span class="line">    <span class="attribute">border-bottom</span> <span class="number">10px</span> solid <span class="number">#e5e5e5</span></span><br><span class="line">    <span class="attribute">color</span> <span class="number">#e5e5e5</span></span><br><span class="line">    -webkit-<span class="attribute">transform-origin</span> <span class="number">0</span> <span class="number">100%</span></span><br><span class="line">    <span class="attribute">transform-origin</span> <span class="number">0</span> <span class="number">100%</span></span><br><span class="line">    -webkit-<span class="attribute">transform</span> scaleY(<span class="number">0.5</span>)</span><br><span class="line">    <span class="attribute">transform</span> scaleY(<span class="number">0.5</span>)</span><br><span class="line">    <span class="attribute">z-index</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+        <h1 id="wepy-组件化开发-1"><a href="#wepy-组件化开发-1" class="headerlink" title="wepy 组件化开发 1"></a>wepy 组件化开发 1</h1><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li><p>组件可以将一组功能封装一个 component 里，并且可以在页面上以自定义标签的形式引入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 列表 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">discover</span>&gt;</span><span class="tag">&lt;/<span class="name">discover</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 底部加载更多提示 --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">bottomLoadMore</span> <span class="attr">:message</span>=<span class="string">'mes'</span> <span class="attr">:show.sync</span>=<span class="string">'showLoading'</span>&gt;</span><span class="tag">&lt;/<span class="name">bottomLoadMore</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 组件暂无数据的提示 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">placeholder</span>&gt;</span><span class="tag">&lt;/<span class="name">placeholder</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 弹出广告 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bombscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">bombscreen</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>引入组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Bomnbscreen <span class="keyword">from</span> <span class="string">'@/components/bomb_screen'</span></span><br><span class="line"><span class="keyword">import</span> Placeholder <span class="keyword">from</span> <span class="string">'@/components/placeholder'</span></span><br><span class="line"><span class="keyword">import</span> BottomLoadMore <span class="keyword">from</span> <span class="string">'@/components/bottom_load_more'</span></span><br><span class="line"><span class="keyword">import</span> Discover <span class="keyword">from</span> <span class="string">'@/components/discover'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 components 声明页面地组件构成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">components = &#123;</span><br><span class="line">    <span class="comment">// 标签名: 组件名</span></span><br><span class="line">    bombscreen: Bomnbscreen,</span><br><span class="line">    placeholder: Placeholder,</span><br><span class="line">    bottomLoadMore: BottomLoadMore,</span><br><span class="line">    discover: Discover</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件标签可以携带参数</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bottomLoadMore</span> <span class="attr">:message</span>=<span class="string">'mes'</span> <span class="attr">:show.sync</span>=<span class="string">'showLoading'</span>&gt;</span><span class="tag">&lt;/<span class="name">bottomLoadMore</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p><code>message=&quot;load more ...&quot;</code> 传参<br><code>:message=&#39;mes&#39;</code> 则是把参数防止在 data 中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">    showLoading: <span class="literal">false</span>,</span><br><span class="line">    mes: <span class="string">'loading more'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>组件数据props动态更新</strong><br>使用 <code>.sync</code> =&gt; <bottomloadmore :message="mes" :show.sync="showLoading"></bottomloadmore></p>
+<ul>
+<li>在组件文件内 props 接收传递的数据<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">props = &#123;</span><br><span class="line">    show: &#123;</span><br><span class="line">        type: <span class="built_in">Boolean</span>,</span><br><span class="line">        <span class="keyword">default</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    message: &#123;</span><br><span class="line">        <span class="keyword">default</span>: <span class="string">'正在加载中'</span>,</span><br><span class="line">        type: <span class="built_in">String</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>组件内接收<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"loadMoreGIF"</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;show&#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"../images/loadding.gif"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="部分代码展示"><a href="#部分代码展示" class="headerlink" title="部分代码展示"></a>部分代码展示</h2><p>home.wepy<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"less"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- bombscreen自定义标签 </span></span><br><span class="line"><span class="comment">        组件可以将一组功能封装一个 component 里，</span></span><br><span class="line"><span class="comment">        并且可以在页面上以自定义标签的形式引入 --&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 首页列表 分组件 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 列表 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">discover</span>&gt;</span><span class="tag">&lt;/<span class="name">discover</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 底部加载更多提示 --&gt;</span>       </span><br><span class="line">    <span class="comment">&lt;!-- 传参 message="load more ..." --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- :message='mes' 将mes放在data中 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 同步改变 .sync props动态更新 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bottomLoadMore</span> <span class="attr">:message</span>=<span class="string">'mes'</span> <span class="attr">:show.sync</span>=<span class="string">'showLoading'</span>&gt;</span><span class="tag">&lt;/<span class="name">bottomLoadMore</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 组件暂无数据的提示 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">placeholder</span>&gt;</span><span class="tag">&lt;/<span class="name">placeholder</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 弹出广告 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bombscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">bombscreen</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// wepy 在本地的 node_modules/ 下（其实也在全局，如果全局安装了 wepy）</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 将页面换一个视角</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 组件视角</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> Bomnbscreen <span class="keyword">from</span> <span class="string">'@/components/bomb_screen'</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> Placeholder <span class="keyword">from</span> <span class="string">'@/components/placeholder'</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> BottomLoadMore <span class="keyword">from</span> <span class="string">'@/components/bottom_load_more'</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> Discover <span class="keyword">from</span> <span class="string">'@/components/discover'</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 单页面组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Home</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">page</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// es6 class 内部，不是 json 不使用 : </span></span></span><br><span class="line"><span class="undefined">        data = &#123;</span></span><br><span class="line"><span class="javascript">            showLoading: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            mes: <span class="string">'loading more'</span></span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 声明页面地组件构成</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 好处 多人协作 将复杂度细化 可读性更强</span></span></span><br><span class="line"><span class="undefined">        components = &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">// 标签名: 组件名</span></span></span><br><span class="line"><span class="undefined">            bombscreen: Bomnbscreen,</span></span><br><span class="line"><span class="undefined">            placeholder: Placeholder,</span></span><br><span class="line"><span class="undefined">            bottomLoadMore: BottomLoadMore,</span></span><br><span class="line"><span class="undefined">            discover: Discover</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        onLoad() &#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">this</span>.showLoading = <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>bottom_load_more.wpy<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"less"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .loadMoreGIF &#123;</span></span><br><span class="line"><span class="undefined">        margin: 15rpx auto;</span></span><br><span class="line"><span class="undefined">        width: 240rpx;</span></span><br><span class="line"><span class="undefined">        display: flex;</span></span><br><span class="line"><span class="undefined">        flex-direction: row;</span></span><br><span class="line"><span class="undefined">        align-items: center;</span></span><br><span class="line"><span class="undefined">        text &#123;</span></span><br><span class="line"><span class="undefined">            font-size: 30rpx;</span></span><br><span class="line"><span class="undefined">            color: #999;</span></span><br><span class="line"><span class="undefined">            margin-left: 10rpx;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        image &#123;</span></span><br><span class="line"><span class="undefined">            display: block;</span></span><br><span class="line"><span class="undefined">            width: 30rpx;</span></span><br><span class="line"><span class="undefined">            height: 30rpx;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"loadMoreGIF"</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;show&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"../images/loadding.gif"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">import</span> wepy <span class="keyword">from</span> <span class="string">'wepy'</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">BottomLoadMore</span> <span class="keyword">extends</span> <span class="title">wepy</span>.<span class="title">component</span> </span>&#123;</span></span><br><span class="line"><span class="undefined">        props = &#123;</span></span><br><span class="line"><span class="undefined">            show: &#123;</span></span><br><span class="line"><span class="javascript">                type: <span class="built_in">Boolean</span>,</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">            message: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">default</span>: <span class="string">'正在加载中'</span>,</span></span><br><span class="line"><span class="javascript">                type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -404,6 +429,17 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+        文章标签: 
+          
+            <a href="/tags/wepy/" rel="tag"># wepy</a>
+          
+            <a href="/tags/component/" rel="tag"># component</a>
+          
+            <a href="/tags/组件/" rel="tag"># 组件</a>
+          
+        </div>
+      
 
       
       
@@ -413,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/16/wxapp/" rel="next" title="微信小程序学习(一)">
-                <i class="fa fa-chevron-left"></i> 微信小程序学习(一)
+              <a href="/2018/06/05/wepy2/" rel="next" title="wepy 进阶之用户信息获取和用户登录">
+                <i class="fa fa-chevron-left"></i> wepy 进阶之用户信息获取和用户登录
               </a>
             
           </div>
@@ -422,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/20/es6-assign()/" rel="prev" title="Object.assign()">
-                Object.assign() <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动-Web-1像素-问题"><span class="nav-number">1.</span> <span class="nav-text">移动 Web 1像素 问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#wepy-组件化开发-1"><span class="nav-number">1.</span> <span class="nav-text">wepy 组件化开发 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#要点"><span class="nav-number">1.1.</span> <span class="nav-text">要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部分代码展示"><span class="nav-number">1.2.</span> <span class="nav-text">部分代码展示</span></a></li></ol></li></ol></div>
             
 
           </div>
