@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git 提交免密登录]]></title>
+    <url>%2F2018%2F06%2F13%2Fgit-%E6%8F%90%E4%BA%A4%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[前提首先你要有ssh公钥和秘钥 查看当前git项目的提交方式1git remote -v 如果是 http 协议提交则会显示12origin https://github.com/tanglintang/js_fullStack_study.git (fetch)origin https://github.com/tanglintang/js_fullStack_study.git (push) 将 http 改为 ssh在你的项目中，点击 clone or download，选择右上角 use ssh，将地址复制下来1git remote set-url origin 你的ssh地址 查看123$ git remote -vorigin git@github.com:tanglintang/js_fullStack_study.git (fetch)origin git@github.com:tanglintang/js_fullStack_study.git (push)]]></content>
+      <tags>
+        <tag>git</tag>
+        <tag>http</tag>
+        <tag>ssh</tag>
+        <tag>免密登录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[BFC]]></title>
     <url>%2F2018%2F06%2F06%2FBFC%2F</url>
     <content type="text"><![CDATA[BFC (Block Formatting Context)块级格式上下文 两个相邻的BFC之间的距离由margin决定。在同一个BFC内部，两个垂直方向相邻的块级元素的margin会发生“塌陷”，重叠为最大的margin body根元素会创造一个 bfc 环境，其下所有元素具有相同的上下文环境块 是页面的基础 核心包裹一个 overflow 不为 visiable 的新的空间外面的环境无法影响，并在内部重新进行 block formating 布局和定位新的 bfc 给出了新的不受外界影响的块级格式化环境 BFC 的约束规则 同一个 BFC 的两个相邻块级元素的 margin 会重叠，与方向无关新的 BFC 破坏这个规则，Context 上下文 BFC 的高度，浮动元素也参与计算 布局规则：每个BFC 元素左边要与包含box的左边相接触 BFC 的区域不会与 float 盒子重叠 如何创建一个 BFC 即重新划分一块渲染区域，它是独立的块级格式化上下文环境 根元素就是一个 BFC overflow: hidden (非 visiable) 会生成一个 BFC float 不为 none display: inline-block、display: table-cell、display: table-captipon position: absolute fixed 只要不为 static 定位块级定位 垂直方向上行内 水平方向float 浮动 在一行的左右两边弹性布局position 网页的定位(大概念的)文档流 、浮动 、定位 、flex 、display: tabel 例1 父子1234567891011121314151617181920212223&lt;style&gt;p &#123; color: #ff5555; background-color: #ffcccc; width: 200px; line-height: 100px; text-align: center; margin: 100px;&#125;.wrap &#123; /* 创建新的 BFC */ overflow: hidden;&#125;.wrap p &#123; margin-top: 150px;&#125;&lt;/style&gt;&lt;html&gt;&lt;p&gt;123&lt;/p&gt;&lt;div class="wrap"&gt; &lt;p&gt;qwe&lt;/p&gt;&lt;/div&gt;&lt;/html&gt; 例2 浮动123456789101112131415161718192021&lt;style&gt;.par &#123; border: 5px solid #fcc; width: 300px; /* 不是超出隐藏，而是创造一个 BFC 环境 */ overflow: hidden;&#125;.child &#123; border: 5px solid #f66; width: 100px; height: 100px; /* 脱离了文档流 */ float: left;&#125;&lt;/style&gt;&lt;html&gt;&lt;div class="par"&gt; &lt;div class="child"&gt;&lt;/div&gt; &lt;div class="child"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/html&gt; 例3 自适应两列式布局1234567891011121314151617&lt;style&gt;.aside &#123; /* float BFC 与左边盒子相接触 */ float: left; width: 100px; height: 150px; background-color: #f66;&#125;.main &#123; height: 200px; background-color: #fcc; /* BFC 的区域不会与 float 盒子重叠 实现自定义布局 */ overflow: hidden;&#125;&lt;/style&gt;&lt;div class="aside"&gt;&lt;/div&gt;&lt;div class="main"&gt;321321321313&lt;/div&gt;]]></content>
